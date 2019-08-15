@@ -1,5 +1,9 @@
 # Web components study
 
+**Disclaimer: This by all means shouldn't be used in production or be taken as real world situation. It is only a naive approach of using web components in other frameworks/libs and how to simplistically build one.**
+
+**Although the purpose were achieved surely the actual real world web component and its backend should be writen in a propper way with validations, security, etc...**
+
 ## Setting up
 
 If you just want to try the `<auth-component></auth-component>` web component all you need to do is to `npm i stencil-auth-component` from you project root, configure it for [React](https://stenciljs.com/docs/react), [Angular](https://stenciljs.com/docs/angular), [Vue](https://stenciljs.com/docs/vue), [Ember](https://stenciljs.com/docs/ember) or directly into your [Javascript/HTML structure](https://stenciljs.com/docs/javascript).
