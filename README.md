@@ -11,7 +11,7 @@ If you just want to try the `<auth-component></auth-component>` web component al
 
 You also have to run your local frontend application from `localhost:3000`, as this has been added to the CORS exeption, and and add a proxy configuration for the `https://proxy-sever.herokuapp.com` api, as it will behave as if it were your own backend. On React you simple add a `"proxy": "https://proxy-sever.herokuapp.com"` to your `package.json`, if you are using `create-react-app` and that will do the trick.
 
-You can always have your own backend to play with or use the two "fake" backend that comes with this repo: `auth_web_component`, which works as the `<auth-component></auth-component>` own backend, and `proxy-server` which works as your application backend. Then you change the `/config/express.js` file to add your `localhost` address to the cors.
+You can always have your own backend to play with or use the two "fake" backend that comes with this repo: `auth-web-component-be`, which works as the `<auth-component></auth-component>` own backend, and `proxy-server` which works as your application backend. Then you change the `/config/express.js` file to add your `localhost` address to the cors.
 
 **In order to run both servers locally you also would have to [install mongo db](https://docs.mongodb.com/manual/administration/install-community/), all the configuration is already in place fo it to run locally.**
 
