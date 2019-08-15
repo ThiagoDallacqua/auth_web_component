@@ -16,7 +16,7 @@ You can always have your own backend to play with or use the two "fake" backend 
 After the set up is done you can simply use the `<auth-component></auth-component>` component whenever you need passing a `proxy` prop to it with the address to your own backend endpoint, localhost from the "fake" backend or the heroku application created just for this purpose: `https://proxy-sever.herokuapp.com`, which you will have to proxy first and then just pass the `/register` endpoint as prop like this:
 
 `package.json` of a React application
-```json
+```javascript
 {
   "name": "<your-app-name>",
   "proxy": "https://proxy-sever.herokuapp.com",
