@@ -53,3 +53,16 @@ class App extends React.Component {
 
 export default App;
 ```
+
+It will work like this, if you don't want to create a new user just use `some@email.com` and `123` to login, after click the button `Login` or pressing enter the web component will fire one request to its own server, creating a jwt token containing the user information and forwarding it to "your" server using the proxy prop passed to it. After that the user should be treated as "logged in" by your server and all requests from that moment until the token expires should be accepted.
+
+It's recommended to leave the javascript console open to follow the logs fired by the web componets.
+
+## Colaboration
+
+If you wish to colaborate to this demo project here's some points that could be added:
+
+* Validations (User, password, etc).
+* Proper routing on the web component frontend (it was written using [Stencil](https://stenciljs.com/docs/introduction)).
+* More flows
+* whatever you feel like 😃
