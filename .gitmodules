@@ -1,0 +1,6 @@
+[submodule "auth-component-be"]
+	path = auth-component-be
+	url = https://github.com/ThiagoDallacqua/auth-component-be
+[submodule "proxy-server"]
+	path = proxy-server
+	url = https://github.com/ThiagoDallacqua/proxy-server
