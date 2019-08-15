@@ -22,12 +22,12 @@ After the set up is done you can simply use the `<auth-component></auth-componen
   "proxy": "https://proxy-sever.herokuapp.com",
   "version": "<your-app-version>",
   //...,
-  "dependencies: {
+  "dependencies": {
     //...,
     "stencil-auth-component": "0.0.5",
     //...
   }
-  ... // the rest of your package.json
+  //... the rest of your package.json
 }
 ```
 
