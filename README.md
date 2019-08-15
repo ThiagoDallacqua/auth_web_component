@@ -2,7 +2,7 @@
 
 **Disclaimer: This by all means shouldn't be used in production or be taken as real world situation. It is only a naive approach of using web components in other frameworks/libs and how to simplistically build one.**
 
-**Although the purpose were achieved surely the actual real world web component and its backend should be writen in a propper way with validations, security, etc...**
+**Although the purpose were achieved, surely the actual real world web component and its backend should be writen in a propper way with validations, security, etc...**
 
 ## Setting up
 
