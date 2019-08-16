@@ -12,6 +12,19 @@
 | `proxy`  | `proxy`   |             | `string` | `undefined` |
 
 
+## Methods
+
+### `getToken(state: any) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Depends on
