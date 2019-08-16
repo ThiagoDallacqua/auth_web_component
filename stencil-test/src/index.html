@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <auth-component proxy="https://proxy-sever.herokuapp.com/register"></auth-component>
+  <auth-component setWrapperState="function() {console.log('via props')}" proxy="https://proxy-sever.herokuapp.com/register"></auth-component>
 
 </body>
 </html>

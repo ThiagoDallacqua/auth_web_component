@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property       | Attribute | Description | Type                   | Default     |
-| -------------- | --------- | ----------- | ---------------------- | ----------- |
-| `changeRoute`  | --        |             | `() => void`           | `undefined` |
-| `proxy`        | `proxy`   |             | `string`               | `undefined` |
-| `wrapperState` | --        |             | `(token: any) => void` | `undefined` |
+| Property          | Attribute | Description | Type                   | Default     |
+| ----------------- | --------- | ----------- | ---------------------- | ----------- |
+| `changeRoute`     | --        |             | `() => void`           | `undefined` |
+| `proxy`           | `proxy`   |             | `string`               | `undefined` |
+| `setWrapperState` | --        |             | `(token: any) => void` | `undefined` |
 
 
 ## Dependencies
