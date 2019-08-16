@@ -1,5 +1,6 @@
 import { Component, Prop, State, h } from '@stencil/core';
 type ChangeRoute = () => void;
+export type WrapperState = (token: any) => void;
 @Component({
   tag: 'register-component',
   styleUrl: 'my-component.css',
@@ -10,6 +11,7 @@ export class registerComponent {
   @State() password: string | number | string[];
   @Prop() proxy: string;
   @Prop() changeRoute: ChangeRoute;
+  @Prop() wrapperState: WrapperState;
 
   hadleEmailChange(e) {
     const { target: { value } } = e

@@ -1,5 +1,6 @@
 import { Component, Prop, State, h } from '@stencil/core';
 export type ChangeRoute = () => void;
+export type WrapperState = (token: any) => void;
 @Component({
   tag: 'login-component',
   styleUrl: 'my-component.css',
@@ -10,6 +11,7 @@ export class loginComponent {
   @State() password: string | number | string[];
   @Prop() proxy: string;
   @Prop() changeRoute: ChangeRoute;
+  @Prop() wrapperState: WrapperState;
 
   hadleEmailChange(e) {
     const { target: { value } } = e
@@ -38,6 +40,7 @@ export class loginComponent {
     console.log(data, this.proxy)
 
     if (this.proxy && data.token) {
+      this.wrapperState(data.token)
       const config = {
         method: 'POST',
         headers: {

@@ -8,19 +8,26 @@
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   ChangeRoute,
+  WrapperState,
 } from './components/login-component/login-component';
+import {
+  WrapperState as WrapperState1,
+} from './components/register-component/register-component';
 
 export namespace Components {
   interface AuthComponent {
+    'getToken': (state: any) => Promise<void>;
     'proxy': string;
   }
   interface LoginComponent {
     'changeRoute': ChangeRoute;
     'proxy': string;
+    'wrapperState': WrapperState;
   }
   interface RegisterComponent {
     'changeRoute': ChangeRoute;
     'proxy': string;
+    'wrapperState': WrapperState;
   }
 }
 
@@ -58,10 +65,12 @@ declare namespace LocalJSX {
   interface LoginComponent extends JSXBase.HTMLAttributes<HTMLLoginComponentElement> {
     'changeRoute'?: ChangeRoute;
     'proxy'?: string;
+    'wrapperState'?: WrapperState;
   }
   interface RegisterComponent extends JSXBase.HTMLAttributes<HTMLRegisterComponentElement> {
     'changeRoute'?: ChangeRoute;
     'proxy'?: string;
+    'wrapperState'?: WrapperState;
   }
 
   interface IntrinsicElements {
