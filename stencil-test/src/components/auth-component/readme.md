@@ -7,22 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `proxy`  | `proxy`   |             | `string` | `undefined` |
-
-
-## Methods
-
-### `getToken(state: any) => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| Property          | Attribute           | Description | Type     | Default                                                  |
+| ----------------- | ------------------- | ----------- | -------- | -------------------------------------------------------- |
+| `proxy`           | `proxy`             |             | `string` | `undefined`                                              |
+| `setWrapperState` | `set-wrapper-state` |             | `any`    | `(state: any = 'you') => console.log('hi there', state)` |
 
 
 ## Dependencies

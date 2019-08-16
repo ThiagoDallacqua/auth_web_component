@@ -16,8 +16,8 @@ import {
 
 export namespace Components {
   interface AuthComponent {
-    'getToken': (state: any) => Promise<void>;
     'proxy': string;
+    'setWrapperState': any;
   }
   interface LoginComponent {
     'changeRoute': ChangeRoute;
@@ -61,6 +61,7 @@ declare global {
 declare namespace LocalJSX {
   interface AuthComponent extends JSXBase.HTMLAttributes<HTMLAuthComponentElement> {
     'proxy'?: string;
+    'setWrapperState'?: any;
   }
   interface LoginComponent extends JSXBase.HTMLAttributes<HTMLLoginComponentElement> {
     'changeRoute'?: ChangeRoute;

@@ -1,4 +1,4 @@
-import { Component, Prop, h, State, Method } from '@stencil/core';
+import { Component, Prop, h, State } from '@stencil/core';
 
 @Component({
   tag: 'auth-component',
@@ -11,18 +11,16 @@ export class authComponent {
   @State() wrapperState: {
     [key: string]: any;
   };
-  @Method()
-  async getToken(state) {
-    this.wrapperState = state
-  }
+  @Prop() setWrapperState: any = (state: any = 'you') => console.log('hi there', state);
 
   render() {
+    this.setWrapperState()
     return (
       <div>
         {
           this.isLogin
-          ? <login-component wrapperState={token => {this.wrapperState['token'] = token}} proxy={this.proxy} changeRoute={() => {this.isLogin = false}}></login-component>
-          : <register-component wrapperState={token => {this.wrapperState['token'] = token}} proxy={this.proxy} changeRoute={() => {this.isLogin = true}}></register-component>
+          ? <login-component wrapperState={token => {this.setWrapperState(token)}} proxy={this.proxy} changeRoute={() => {this.isLogin = false}}></login-component>
+          : <register-component wrapperState={token => {this.setWrapperState(token)}} proxy={this.proxy} changeRoute={() => {this.isLogin = true}}></register-component>
         }
       </div>
     )
