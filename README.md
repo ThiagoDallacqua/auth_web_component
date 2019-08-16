@@ -42,10 +42,16 @@ import React from 'react';
 import 'stencil-auth-component'
 
 class App extends React.Component {
+  state = {
+    token: {}
+  }
+  componentDidMount() {
+    this.refs.auth_component.setWrapperState = (token) => this.setState({ token })
+  }
   render() {
     return (
       <div>
-        <auth-component proxy="/register"></auth-component>
+        <auth-component ref="auth_component" proxy="/register"></auth-component>
       </div>
     );
   }
@@ -53,6 +59,10 @@ class App extends React.Component {
 
 export default App;
 ```
+
+Here we decided to pass in the prop `setWrapperState` using the `ref`, which will be in charge of updating the state with the token received from the reponse of the login/register.
+
+Another way to do it outside of the React world is to `document.querySelector('auth-component').setWrapperState = "<your callback function>"`.
 
 It will work like this, if you don't want to create a new user just use `some@email.com` and `123` to login, after click the button `Login` or pressing enter the web component will fire one request to its own server, creating a jwt token containing the user information and forwarding it to "your" server using the proxy prop passed to it. After that the user should be treated as "logged in" by your server and all requests from that moment until the token expires should be accepted.
 
